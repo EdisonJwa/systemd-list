@@ -1,0 +1,11 @@
+[Unit]
+Description=A simple security tunnel written in Golang
+After=network.target
+
+[Service]
+ExecStart=/opt/gost/gost -C /usr/local/etc/gost/config.json
+User=nobody
+Group=nogroup
+
+[Install]
+WantedBy=multi-user.target

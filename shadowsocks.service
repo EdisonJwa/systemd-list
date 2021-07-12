@@ -1,0 +1,11 @@
+[Unit]
+Description=Shadowsocks Server
+After=network.target
+
+[Service]
+User=nobody
+ExecStart=/opt/shadowsocks/ssserver -c /usr/local/etc/shadowsocks/config.json
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
